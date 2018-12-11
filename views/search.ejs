@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Roboto" rel="stylesheet">
+  <title>Movie search app</title>
+  
+ <style>
+  body {
+  background: url(https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80);
+  background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+	  width: 100%;
+    min-height: 100vh;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  color: #fff;
+}
+
+h1 {
+  font-family: 'Bungee', cursive;
+}
+
+form {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.imp {
+  width: 100%;
+  padding: 12px 50px;
+  margin: 15px 0;
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 0px;
+  width: 100%;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 0px;
+  width: 50%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+ </style> 
+  
+</head>
+<body>
+  <h1>Search for movie:</h1>
+
+<form action="/results" method="GET">
+    <input class="imp" type=text placeholder="search movie" name="search">
+    <input class="btn" type="submit" value="Search">
+</form>
+</body>
+</html>
