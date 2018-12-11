@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Roboto" rel="stylesheet">
+  <title>Results</title>
+  <style>
+body {
+  background: #000;
+  background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+	  width: 100%;
+    min-height: 100vh;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  color: #fff;
+}
+
+h1 {
+  font-family: 'Bungee', cursive;
+}
+
+ul {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+li {
+  padding: 10px;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  font-family: 'Roboto', sans-serif;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 0px;
+  width: 50%;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+li {
+  list-style-type: none;
+}
+  </style>
+</head>
+<body>
+<h1>Results:</h1>
+<ul>
+    <% data["Search"].forEach(function(movie){ %>
+  <li>
+    <img src="<%= movie["Poster"] %>">
+    <h2>
+      <%= movie["Title"] %>
+    </h2>
+    <p><%= movie["Year"] %> </p> 
+  </li>
+      
+  </li>
+      <% }); %>
+ </ul>
+<a class="btn" href="/">Search again</a>
+</body>
+</html>
